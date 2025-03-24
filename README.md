@@ -21,10 +21,11 @@ El objeto JSON que debe retornar cada endpoint debe tener la siguiente estructur
 
 ```json
 {
+  "student": "Estudiante del cual muestra los datos (1 o 2)",
   "name": "Nombre(s) del estudiante",
   "lastNames": "Apellidos del estudiante",
   "email": "Correo del estudiante",
-  "id": "ID de la universidad"
+  "id": "ID de la universidad del estudiante"
 }
 ```
 
@@ -36,11 +37,11 @@ El objeto JSON que debe retornar cada endpoint debe tener la siguiente estructur
 - Asegurarse de que el servidor esté funcionando correctamente y que cada endpoint retorne el JSON adecuado.
 
 ## Esquema del Endpoint
-GET /user_info/:id
+GET /user_info/:student
 
 ### Parámetros:
 
-id (número): ID del usuario a consultar (1 o 2).
+student (número): Estudiante a consultar (1 o 2).
 
 ### Respuestas:
 
@@ -49,10 +50,11 @@ Cuando el usuario existe, devuelve un objeto JSON con su información.
 Ejemplo de respuesta para /user_info/1:
 
 {
+  "student": "1",
   "name": "Felipe",
   "lastNames": "Abella Ballesteros",
   "email": "felipeabba@unisabana.edu.co",
-  "id": "0000291513"
+  "id": "291513"
 }
 
 - 400 - Error de formato
